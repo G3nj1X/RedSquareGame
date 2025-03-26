@@ -1,23 +1,30 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Park my car !</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="manifest" href="manifest.json">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4RzIfqtfbfDBDIjk9loK9KNcB36sbK-U&callback=initMap" async defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Red Square Game</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="map"></div>
-
-    <script src="app.js"></script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js')
-                .then(() => console.log("Service Worker enregistré"))
-                .catch(err => console.log("Erreur SW:", err));
-        }
-    </script>
+  <h1>Attrapez le carré rouge !</h1>
+  <p>Points : <span id="score">0</span></p>
+  <div>
+    <button id="easy">Facile</button>
+    <button id="hard">Difficile</button>
+  </div>
+  
+  <div id="gameArea">
+    <div id="target"></div>
+  </div>
+  <script src="app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js")
+        .then(() => console.log("Service Worker enregistré avec succès !"))
+        .catch((error) => console.error("Erreur d'enregistrement du Service Worker :", error));
+    }
+  </script>
+  
 </body>
 </html>
