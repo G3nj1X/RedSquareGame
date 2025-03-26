@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PWA Hello World</title>
+    <title>Park my car !</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="manifest" href="manifest.json">
+    <script src="https://maps.googleapis.com/maps/api/js?key=TA_CLE_API&callback=initMap" async defer></script>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <button onclick="changeColor()">Changer la couleur</button>
+    <div id="map"></div>
 
     <script src="app.js"></script>
     <script>
