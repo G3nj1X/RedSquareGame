@@ -12,14 +12,13 @@ body {
     margin: 20px auto;
     background-color: #f0f0f0;
     border: 2px solid #ccc;
-    border-radius: 15px;
   }
   
   #target {
     position: absolute;
     width: 30px;
     height: 30px;
-    background-color: red;
+    background-color: blue;
     cursor: pointer;
   }
   
